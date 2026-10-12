@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Demo Keamanan Game</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 24px;
+      min-height: 100vh;
+      box-sizing: border-box;
+      background: #111318;
+      color: white;
+      font-family: Arial, sans-serif;
+      display: grid;
+      place-items: center;
+    }
+    .card {
+      width: 100%;
+      max-width: 380px;
+      box-sizing: border-box;
+      padding: 26px;
+      background: #20232b;
+      border: 1px solid #454955;
+      border-radius: 18px;
+      text-align: center;
+    }
+    .icon { font-size: 52px; }
+    h1 { color: #ff9d36; font-size: 27px; }
+    p { color: #d8dbe2; line-height: 1.6; }
+    button {
+      width: 100%;
+      padding: 14px;
+      border: 0;
+      border-radius: 9px;
+      background: #ff9d36;
+      color: #181818;
+      font-weight: bold;
+      font-size: 15px;
+      cursor: pointer;
+    }
+    #pesan {
+      margin-top: 18px;
+      text-align: left;
+    }
+    .aman { color: #83e6a0; }
+  </style>
+</head>
+<body>
+  <main class="card">
+    <div class="icon">🛡️</div>
+    <h1>GAME SECURITY</h1>
+    <p>Simulasi Edukasi Anti-Phishing</p>
+    <p>
+      Pernah menerima link hadiah game gratis?
+      Hati-hati! Link palsu bisa digunakan untuk
+      menipu pemain dan mengambil alih akun.
+    </p>
+
+    <button onclick="pelajari()">
+      PELAJARI TANDA PENIPUAN
+    </button>
+
+    <section id="pesan" aria-live="polite"></section>
+
+    <p class="aman">
+      ✓ Demo aman — tanpa login dan tanpa pengumpulan data.
+    </p>
+  </main>
+
+  <script>
+    function pelajari() {
+      document.getElementById("pesan").innerHTML = `
+        <h3>Kenali tanda-tandanya!</h3>
+        <ul>
+          <li>Alamat situs tidak resmi atau salah eja.</li>
+          <li>Hadiah gratis yang terlalu bagus untuk dipercaya.</li>
+          <li>Permintaan password atau kode OTP.</li>
+          <li>Pesan yang memaksa kamu bertindak cepat.</li>
+        </ul>
+        <p><b>Tips:</b> Jangan masukkan data akun melalui
+        link yang tidak dapat dipercaya.</p>
+      `;
+    }
+  </script>
+</body>
+</html>
